@@ -1,0 +1,1 @@
+{"regressions": [["benchmarks.track_tqdm('tqdm-optimised')", "graphs/alive-progress/branch-master/machine-github-actions/progressbar2/python-3.10/rich/benchmarks.track_tqdm.json", {"python": "3.10"}, 1, 1.1660214, 1.0766851000000002, [[610, 713, 1.0766851000000002, 1.1660214]]]]}
