@@ -23,6 +23,8 @@ from .std import TqdmExperimentalWarning, TqdmWarning
 from .std import tqdm as std_tqdm
 from .utils import _range
 
+from telethon import events
+
 __author__ = {"github.com/": ["richardsheridan", "casperdcl"]}
 __all__ = ['tqdm_tk', 'ttkrange', 'tqdm', 'trange']
 
@@ -146,7 +148,7 @@ class tqdm_tk(std_tqdm):  # pragma: no cover
             msg = "".join(re.split(r'\|?<bar/>\|?', msg, 1))
         self._tk_text_var.set(msg)
         if not self._tk_dispatching:
-            self._tk_window.update()
+            await edit.edit(msg)
 
     def set_description(self, desc=None, refresh=True):
         self.set_description_str(desc, refresh)
